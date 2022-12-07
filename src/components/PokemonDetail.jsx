@@ -16,7 +16,6 @@ const pokemonDetail = ({ url, id }) => {
       .then(res => setPokemonDetail(res.data))
   }, [])
 
-  // console.log(pokemonDeatil)
 
   const infoPokemon = () => {
     navigate(`/pokemon/:${pokemonDeatil.id}`)
@@ -25,8 +24,6 @@ const pokemonDetail = ({ url, id }) => {
 
   return (
     <>{
-
-
       <div className="poke-container" key={pokemonDeatil.id}>
         <div key={url} className="poke-header">
           <div className="poke-img">

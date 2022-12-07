@@ -11,8 +11,6 @@ const Pokemon = ({ infoPokemon, id }) => {
       .then(res => setInfo(res.data))
   }, [])
 
-  console.log(info)
-
   return (
     <>
       <div className='statistics'>
@@ -24,13 +22,13 @@ const Pokemon = ({ infoPokemon, id }) => {
         </div>
         <div className="change-container">
           <div className="name-pokemon">
-            <p><b>Name:</b> {info.name}</p>
-            <p><b>Abilities:</b> {info.abilities?.[0].ability?.name}</p>
-            <p><b>Abilities:</b> {info.abilities?.[1].ability?.name}</p>
-            <p><b>Heigth:</b> {info.height}</p>
-            <p><b>Weight:</b> {info.weight}</p>
+            <p><b>Name:</b> {info.name}.</p>
+            <p><b>Abilities:</b> {info.abilities?.[0].ability?.name}.</p>
+            <p><b>Abilities:</b> {info.abilities?.[1].ability?.name}.</p>
+            <p><b>Heigth:</b> {info.height} m.</p>
+            <p><b>Weight:</b> {info.weight} m.</p>
             <div className="pokemon-imagen-2">
-              <img src={info.sprites?.front_default} alt="" />
+              <img src={info.sprites?.front_default} alt="pokemon" />
             </div>
           </div>
         </div>

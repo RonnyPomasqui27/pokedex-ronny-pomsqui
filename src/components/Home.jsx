@@ -13,10 +13,10 @@ const Home = () => {
   return (
     <>
       <div className='home'>
-        <div className='img'>
+        {/* <div className='img'>
           <img src="https://i0.wp.com/multarte.com.br/wp-content/uploads/2019/03/pokemon-png-logo.png?resize=696%2C256&ssl=1" alt="" />
           <img src="https://www.nicepng.com/png/full/62-622961_no-one-knows-if-people-eat-pokmon-png.png" alt="" />
-        </div>
+        </div> */}
         <div className="home-container">
           <h3>Welcome trainer !!!</h3>
           <img src="https://www.megaidea.net/wp-content/uploads/2021/08/Pokemon04.png" alt="" width='180px' />

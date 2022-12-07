@@ -111,6 +111,8 @@ p {
   background-size: cover;
 }
 
+
+
 .search-container{
   display: flex;
   gap: 30px;
@@ -338,4 +340,61 @@ p {
 .pokemon-imagen-2 img{
   width: 100%;
   height: 100%;
+}
+
+
+@media (max-width: 375px) {
+  body{
+    padding: 0;
+  }
+
+  .poke-search{
+    background-position: center;
+  }
+
+  .page{
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+  }
+
+  .pokemon-imagen-2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin-left: 170px;
+  }
+
+  .pokemon-imagen-2 img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    animation: poke 8s infinite normal;
+    transition: 1s;
+  }
+
+  .name-pokemon{
+    width: 90%;
+    background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .home-container{
+    width: 90%;
+  }
+}
+
+@keyframes poke {
+  0%{
+    transform: scale(1.4);
+  }
+  50%{
+    transform: rotateY(-180deg);
+  }
+  100%{
+    transform: scale(1.7);
+  }
 }

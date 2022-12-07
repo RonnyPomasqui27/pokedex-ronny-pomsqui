@@ -6,7 +6,6 @@ import PokemonDetail from './PokemonDetail';
 const Pokedex = () => {
   const [pokemons, setPokemons] = useState([]);
 
-  
   useEffect(() => {
     axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
       // axios.get('https://pokeapi.co/api/v2/pokemon/')
@@ -32,24 +31,25 @@ const Pokedex = () => {
   return (
     <>
       <div className="poke-search">
-        <div className="search-container">
+        {/* <div className="search-container">
           <input type="text" placeholder='Search...' />
           <a><i className="fa-solid fa-magnifying-glass"></i></a>
-        </div>
+        </div> */}
       </div>
       <div className='pokemon' key={pokemon.name}>
         {
           pokemon.map(pokemon => (
-            <div className="pokemon-container" key={pokemon.name}>
+            <div key={pokemon.name}>
+            <div className="pokemon-container" >
               <PokemonDetail
                 url={pokemon.url}
                 id={pokemon}
               />
             </div>
+            </div>
           ))
         }
         <div className='page'>
-
           <a onClick={() => setPage(page - 1)}
             disabled={page === 1}
           >
